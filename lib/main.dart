@@ -1,10 +1,21 @@
+import 'package:base_app/pages/home.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_i18n/flutter_i18n.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  await EasyLocalization.ensureInitialized();
+  runApp(
+    
+    EasyLocalization(
+      supportedLocales: const [Locale('es', ''),Locale('en', ''), Locale('de', '')],
+      path: 'assets/i18n', // <-- change the path of the translation files 
+      fallbackLocale: const Locale('es', ''),
+      child: const MyApp()
+
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,37 +23,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
+
+    print(context.locale.toString());
+
     return MaterialApp(
-      supportedLocales: const [
-        Locale('en', ''),
-        Locale('es', ''),
-      ],
-      localizationsDelegates: [
-        FlutterI18nDelegate(
-          translationLoader:
-              FileTranslationLoader(fallbackFile: 'es', useCountryCode: true, basePath:"assets/i18n"),
-          missingTranslationHandler: (key, locale) {
-            print(
-                "--- Missing Key: $key, languageCode: ${locale?.languageCode}");
-          },
-        ),
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
-      builder: FlutterI18n.rootAppBuilder(), //If you want to support RTL.
-      title: 'Base app',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Base Appp'),
-        ),
-        body:  Center(
-          child: Text(
-            FlutterI18n.translate(context, 'common.hello'),
-            ),
-        ),
-      ),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      home: const HomePage()
     );
   }
 }
+
