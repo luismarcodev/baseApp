@@ -1,61 +1,28 @@
-import 'package:easy_localization/easy_localization.dart';
+import 'package:base_app/settings/project_settings.dart';
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage>
-    with SingleTickerProviderStateMixin {
-  late TabController _controller;
-  late int _index;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = TabController(length: 3, vsync: this);
-    _index = 0;
-  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SafeArea(
+      home: DefaultTabController(
+        length: projectSettings["categories"]?.length ?? 0,
         child: Scaffold(
-          resizeToAvoidBottomInset: true,
           appBar: AppBar(
-            title: const Text('common.title').tr(),
+            bottom: const TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.directions_car)),
+                Tab(icon: Icon(Icons.directions_transit)),
+                Tab(icon: Icon(Icons.directions_bike)),
+              ],
+            ),
+            title: const Text('Tabs Demo'),
           ),
-          bottomNavigationBar: BottomNavigationBar(
-            currentIndex: _index,
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.business),
-                label: 'Business',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.school),
-                label: 'School',
-              ),
-            ],
-            selectedItemColor: Colors.amber[800],
-            onTap: (value) {
-              setState(() {
-                _controller.index = value;
-                _index = value;
-              });
-            },
-          ),
-          body: TabBarView(
-            controller: _controller,
-            children: const [
+          body: const TabBarView(
+            children: [
               Icon(Icons.directions_car),
               Icon(Icons.directions_transit),
               Icon(Icons.directions_bike),
