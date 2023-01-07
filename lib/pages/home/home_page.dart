@@ -1,4 +1,5 @@
 import 'package:base_app/settings/project_settings.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 
@@ -7,8 +8,12 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    print('Probando lista de topics:');
+    print(ProjectSettings.topics[0].categories[0].items[0].title);
+
     return DefaultTabController(
-        length: projectSettings["categories"]?.length ?? 0,
+        length: 3,
         child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
@@ -19,7 +24,7 @@ class HomePage extends StatelessWidget {
                 Tab(icon: Icon(Icons.directions_bike)),
               ],
             ),
-            title: const Text('Tabs Demo'),
+            title: const Text('common.title').tr(),
           ),
           body: const TabBarView(
             children: [
