@@ -16,39 +16,41 @@ class HomePage extends StatelessWidget {
               //  bottom:
               title: const Text('common.title').tr(),
             ),
-            body: Stack(children: [
-              TabBarView(
-                children: [
-                  Icon(Icons.directions_car),
-                  Icon(Icons.directions_transit),
-                  Icon(Icons.directions_bike),
-                ],
-              ),
-              Positioned(
-                bottom: 0,
-                child: Expanded(
-                  child: TabBar(
-                    tabs: [
-                      Tab(
-                          icon: Icon(
-                        Icons.directions_car,
-                        color: Colors.red,
-                      )),
-                      Tab(
-                          icon: Icon(
-                        Icons.directions_transit,
-                        color: Colors.red,
-                      )),
-                      Tab(
-                          icon: Icon(
-                        Icons.directions_bike,
-                        color: Colors.red,
-                      )),
-                    ],
-                  ),
+            body: Stack(
+              children: const [
+                TabBarView(
+                  children: [
+                    Icon(Icons.directions_car),
+                    Icon(Icons.directions_transit),
+                    Icon(Icons.directions_bike),
+                  ],
                 ),
-              )
-            ]),
+                Positioned(
+                  bottom: 0,
+                  child: Expanded(
+                    child: TabBar(
+                      tabs: [
+                        Tab(
+                            icon: Icon(
+                          Icons.directions_car,
+                          color: Colors.red,
+                        )),
+                        Tab(
+                            icon: Icon(
+                          Icons.directions_transit,
+                          color: Colors.red,
+                        )),
+                        Tab(
+                            icon: Icon(
+                          Icons.directions_bike,
+                          color: Colors.red,
+                        )),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
