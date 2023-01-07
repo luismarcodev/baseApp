@@ -7,11 +7,11 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: DefaultTabController(
+    return DefaultTabController(
         length: projectSettings["categories"]?.length ?? 0,
         child: Scaffold(
           appBar: AppBar(
+            centerTitle: true,
             bottom: const TabBar(
               tabs: [
                 Tab(icon: Icon(Icons.directions_car)),
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
+      );
+    
   }
 }
