@@ -1,12 +1,13 @@
 {
   "common": {
-    "title": "Título",
+    "title": "Title",
     "subtitle": "This is a subtitle of the aplicaton"
   },
   "topics": {
     "topic1": {
       "title": "Topic 1",
       "subtitle": "Subtitle of topic 1",
+      "urlImage": "https://objetivoweb.es/base_app/no_image.jpg",
       "categories": {
         "category1": {
           "title": "Category 1",
@@ -37,6 +38,7 @@
     "topic2": {
       "title": "Topic 2",
       "subtitle": "Subtitle of topic 2",
+      "urlImage": "https://objetivoweb.es/base_app/no_image.jpg",
       "categories": {
         "category1": {
           "title": "Category 2",
@@ -67,6 +69,7 @@
     "topic3": {
       "title": "Topic 3",
       "subtitle": "Subtitle of topic 3",
+      "urlImage": "https://objetivoweb.es/base_app/no_image.jpg",
       "categories": {
         "category1": {
           "title": "Category 3",

@@ -1,5 +1,6 @@
 class Item {
   Item({
+    required this.translationKey,
     required this.title,
     this.subtitle,
     this.description,
@@ -7,17 +8,17 @@ class Item {
   });
 
   final String title;
+  final String translationKey;
   String? subtitle;
   String? description;
   String? urlImage;
 
-
-  factory Item.fromMap(Map map){
+  factory Item.fromMap(Map map) {
     return Item(
-      title: map['title'],
-      subtitle: map['subtitle'],
-      description: map['description'],
-      urlImage: map['urlImage']
-    );
+        translationKey: map['translationKey'],
+        title: map['title'],
+        subtitle: map['subtitle'],
+        description: map['description'],
+        urlImage: map['urlImage']);
   }
 }
