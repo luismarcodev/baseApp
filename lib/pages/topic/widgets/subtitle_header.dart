@@ -1,9 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SubtitleHeader extends StatelessWidget {
-  const SubtitleHeader({
+class TopicHeader extends StatelessWidget {
+  const TopicHeader({
     super.key,
     required this.subtitle,
     this.imageUrlLink,
