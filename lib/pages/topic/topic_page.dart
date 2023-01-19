@@ -1,5 +1,5 @@
-import 'package:base_app/category/category_horizontal_list_view.dart';
-import 'package:base_app/category/widgets/custom_subtitle.dart';
+import 'package:base_app/pages/topic/category/widgets/category_section.dart';
+import 'package:base_app/pages/topic/category/widgets/custom_subtitle.dart';
 import 'package:base_app/pages/topic/widgets/subtitle_header.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -27,11 +27,25 @@ class TopicPage extends StatelessWidget {
             subtitle: '${topic.translationKey}.subtitle',
             isTranslationKey: true,
           ),
-          CategoryHorizontalListView(
-            category: topic.categories[0],
-          )
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: Column(
+              children: getCategoryWidgets(topic.categories),
+            ),
+          ),
         ],
       ),
     );
+  }
+
+  List<Widget> getCategoryWidgets(List<Category> categories) {
+    List<Widget> categoryList = [];
+
+    for (Category category in categories) {
+      categoryList.add(CategorySection(category: category));
+      categoryList.add(const Divider());
+    }
+
+    return categoryList;
   }
 }

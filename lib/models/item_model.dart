@@ -4,14 +4,14 @@ class Item {
     required this.title,
     this.subtitle,
     this.description,
-    this.urlImage,
+    this.urlImage = 'https://objetivoweb.es/base_app/no_image.jpg',
   });
 
   final String title;
   final String translationKey;
   String? subtitle;
   String? description;
-  String? urlImage;
+  String urlImage;
 
   factory Item.fromMap(Map map) {
     return Item(
