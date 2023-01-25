@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:base_app/pages/item/item_page.dart';
 import 'package:base_app/theme/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -16,17 +17,30 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        image: DecorationImage(
-          image: NetworkImage(item.urlImage + Random().nextInt(100).toString()),
-          fit: BoxFit.cover,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ItemPage(
+              item: item,
+            ),
+          ),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image:
+                NetworkImage(item.urlImage + Random().nextInt(100).toString()),
+            fit: BoxFit.cover,
+          ),
         ),
-      ),
-      width: 150,
-      height: 150,
-      child: Center(
-        child: Text('${item.translationKey}.title').tr(),
+        width: 150,
+        height: 150,
+        child: Center(
+          child: Text('${item.translationKey}.title').tr(),
+        ),
       ),
     );
   }

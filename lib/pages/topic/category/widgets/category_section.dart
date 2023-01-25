@@ -1,7 +1,8 @@
 import 'package:base_app/pages/topic/items/widgets/items_horizontal_list_view.dart';
-import 'package:base_app/pages/topic/category/widgets/custom_subtitle.dart';
-import 'package:base_app/pages/topic/category/widgets/custom_title.dart';
+import 'package:base_app/widgets/custom_subtitle.dart';
+import 'package:base_app/widgets/custom_title.dart';
 import 'package:base_app/models/category_model.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 class CategorySection extends StatelessWidget {
@@ -22,8 +23,9 @@ class CategorySection extends StatelessWidget {
             isTranslationKey: true,
           ),
         ),
+        Text('topics.topic1.categories.category1.subtitle').tr(),
         CustomSubTitle(
-          subtitle: category.subtitle ?? '',
+          subtitle: '${category.translationKey}.subtitle',
           isTranslationKey: true,
         ),
         ItemsHorizontalListView(items: category.items)

@@ -1,6 +1,6 @@
 import 'package:base_app/pages/topic/category/widgets/category_section.dart';
-import 'package:base_app/pages/topic/category/widgets/custom_subtitle.dart';
-import 'package:base_app/pages/topic/widgets/subtitle_header.dart';
+import 'package:base_app/widgets/custom_subtitle.dart';
+import 'package:base_app/widgets/custom_header_with_image.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,7 @@ class TopicPage extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          TopicHeader(
+          CustomHeaderWithImage(
               subtitle: '${topic.translationKey}.title',
               imageUrlLink: topic.urlImage),
           CustomSubTitle(

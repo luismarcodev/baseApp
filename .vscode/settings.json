@@ -6,5 +6,9 @@
         "flutter"
     ],
     "i18n-ally.keystyle": "nested",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "[dart]": {
+        "editor.defaultFormatter": "Dart-Code.dart-code",
+        "editor.formatOnSave": true,
+    }
 }

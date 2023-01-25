@@ -29,7 +29,7 @@ class ProjectSettings {
   List<Category> _setCategories(String parentTranslationKey, Map data) {
     List<Category> categoryList = [];
     data.forEach((k, v) {
-      v['translationKey'] = '$parentTranslationKey.$k';
+      v['translationKey'] = '$parentTranslationKey.categories.$k';
       List<Item> itemsList = _setItems(v['translationKey'], v['items']);
       v['items'] = itemsList;
 
@@ -41,7 +41,7 @@ class ProjectSettings {
   List<Item> _setItems(String parentTranslationKey, Map data) {
     List<Item> itemsList = [];
     data.forEach((k, v) {
-      v['translationKey'] = '$parentTranslationKey.$k';
+      v['translationKey'] = '$parentTranslationKey.items.$k';
       itemsList.add(Item.fromMap(v));
     });
     return itemsList;
