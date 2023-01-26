@@ -23,6 +23,9 @@ class TopicPage extends StatelessWidget {
           CustomHeaderWithImage(
               subtitle: '${topic.translationKey}.title',
               imageUrlLink: topic.urlImage),
+          const SizedBox(
+            height: 8,
+          ),
           CustomSubTitle(
             subtitle: '${topic.translationKey}.subtitle',
             isTranslationKey: true,

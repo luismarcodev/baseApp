@@ -1,3 +1,4 @@
+import 'package:base_app/theme/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -13,6 +14,14 @@ class CustomSubTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return isTranslationKey ? Text(subtitle).tr() : Text(subtitle);
+    return isTranslationKey
+        ? Text(
+            subtitle,
+            style: BaseStyles.subtitleStyle,
+          ).tr()
+        : Text(
+            subtitle,
+            style: BaseStyles.subtitleStyle,
+          );
   }
 }

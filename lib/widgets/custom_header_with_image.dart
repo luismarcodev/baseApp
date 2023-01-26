@@ -23,33 +23,27 @@ class CustomHeaderWithImage extends StatelessWidget {
               //borderRadius: BorderRadius.circular(8.0),
               child: imageUrlLink != null
                   ? Image(
-                      height: 240,
+                      height: 300,
                       fit: BoxFit.cover,
                       image: NetworkImage(imageUrlLink!))
                   : const SizedBox(),
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              //Navigator.pushNamed(context, sLinkTarget);
-            },
-            child: Container(
-              decoration: BoxDecoration(shape: BoxShape.circle),
-              width: double.infinity,
-              height: 250,
-              alignment: AlignmentDirectional.center,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(20),
-                child: Container(
-                  color: Color.fromRGBO(255, 255, 255, 0.8),
-                  padding: EdgeInsets.all(18),
-                  child: Text(subtitle,
-                          style: TextStyle(
-                              fontSize: 35,
-                              color: Colors.black54,
-                              fontFamily: 'abold'))
-                      .tr(),
-                ),
+          Container(
+            decoration: const BoxDecoration(shape: BoxShape.circle),
+            width: double.infinity,
+            height: 250,
+            alignment: AlignmentDirectional.center,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(4),
+              child: Container(
+                color: Color.fromRGBO(255, 255, 255, 0.5),
+                padding: EdgeInsets.all(18),
+                child: Text(subtitle,
+                    style: TextStyle(
+                      fontSize: 35,
+                      color: Colors.black54,
+                    )).tr(),
               ),
             ),
           ),

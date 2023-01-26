@@ -1,3 +1,4 @@
+import 'package:base_app/widgets/custom_description.dart';
 import 'package:flutter/material.dart';
 
 import '../../models/item_model.dart';
@@ -15,16 +16,28 @@ class ItemPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [
-        CustomHeaderWithImage(
-          subtitle: '${item.translationKey}.title',
-          imageUrlLink: item.urlImage,
-        ),
-        CustomSubTitle(
-          subtitle: '${item.translationKey}.subtitle',
-          isTranslationKey: true,
-        ),
-      ]),
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        automaticallyImplyLeading: true,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        shadowColor: Colors.transparent,
+      ),
+      body: Column(
+        children: [
+          CustomHeaderWithImage(
+            subtitle: '${item.translationKey}.title',
+            imageUrlLink: item.urlImage,
+          ),
+          CustomSubTitle(
+            subtitle: '${item.translationKey}.subtitle',
+            isTranslationKey: true,
+          ),
+          CustomDescription(
+            description: '${item.translationKey}.description',
+          ),
+        ],
+      ),
     );
   }
 }

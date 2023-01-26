@@ -11,7 +11,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(ProjectSettings.topics);
     return DefaultTabController(
       length: ProjectSettings.topics.length,
       child: Scaffold(
@@ -40,7 +39,13 @@ class HomePage extends StatelessWidget {
     List<Widget> topicsList = [];
 
     for (Topic topic in ProjectSettings.topics) {
-      topicsList.add(Tab(child: Text(topic.translationKey + '.title').tr()));
+      topicsList.add(Tab(
+          child: Text(
+        '${topic.translationKey}.title',
+        style: const TextStyle(
+          fontSize: 18,
+        ),
+      ).tr()));
     }
     return topicsList;
   }

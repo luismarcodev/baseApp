@@ -1,3 +1,4 @@
+import 'package:base_app/theme/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -13,14 +14,10 @@ class CustomTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const textStyle = TextStyle(
-      fontSize: 24,
-    );
-
     return isTranslationKey
         ? Text(
             title,
-            style: textStyle,
+            style: BaseStyles.titleStyle,
           ).tr()
         : Text(title);
   }

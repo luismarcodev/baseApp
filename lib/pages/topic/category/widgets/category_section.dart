@@ -1,4 +1,4 @@
-import 'package:base_app/pages/topic/items/widgets/items_horizontal_list_view.dart';
+import 'package:base_app/pages/topic/widgets/items_horizontal_list_view.dart';
 import 'package:base_app/widgets/custom_subtitle.dart';
 import 'package:base_app/widgets/custom_title.dart';
 import 'package:base_app/models/category_model.dart';
@@ -23,12 +23,14 @@ class CategorySection extends StatelessWidget {
             isTranslationKey: true,
           ),
         ),
-        Text('topics.topic1.categories.category1.subtitle').tr(),
         CustomSubTitle(
           subtitle: '${category.translationKey}.subtitle',
           isTranslationKey: true,
         ),
-        ItemsHorizontalListView(items: category.items)
+        const SizedBox(
+          height: 8,
+        ),
+         ItemsHorizontalListView(items: category.items)
       ],
     );
   }

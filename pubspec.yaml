@@ -56,6 +56,13 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  fonts:
+      - family: roboto     
+        fonts:
+          - asset: assets/fonts/Roboto-Regular.ttf
+      - family: monserratBold     
+        fonts:
+          - asset: assets/fonts/Montserrat-Regular.ttf
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
