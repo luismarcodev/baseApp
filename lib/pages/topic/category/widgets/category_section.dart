@@ -19,7 +19,7 @@ class CategorySection extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: CustomTitle(
-            title: category.title,
+            title: '${category.translationKey}.title',
             isTranslationKey: true,
           ),
         ),
@@ -30,7 +30,7 @@ class CategorySection extends StatelessWidget {
         const SizedBox(
           height: 8,
         ),
-         ItemsHorizontalListView(items: category.items)
+        ItemsHorizontalListView(items: category.items)
       ],
     );
   }

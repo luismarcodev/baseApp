@@ -6,6 +6,7 @@ import 'package:base_app/models/topic_model.dart';
 import 'package:flutter/services.dart';
 
 class ProjectSettings {
+  static String title = 'Title';
   static List<Topic> topics = [];
 
   Future<void> getMainData() async {
