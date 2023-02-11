@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:base_app/models/category_model.dart';
 import 'package:base_app/models/item_model.dart';
 import 'package:base_app/models/topic_model.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/services.dart';
 
 class ProjectSettings {
@@ -12,10 +13,10 @@ class ProjectSettings {
   Future<void> getMainData() async {
     final String response = await rootBundle.loadString('assets/i18n/en.json');
     final Map data = await json.decode(response);
-    _setTopics(data['topics']);
+    setTopics(data['topics']);
   }
 
-  void _setTopics(Map data) {
+  void setTopics(Map data) {
     data.forEach((k, v) {
       v['translationKey'] = 'topics.$k';
 

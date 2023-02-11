@@ -20,12 +20,12 @@ class CategorySection extends StatelessWidget {
           alignment: Alignment.centerLeft,
           child: CustomTitle(
             title: '${category.translationKey}.title',
-            isTranslationKey: true,
+            isTranslationKey: false,
           ),
         ),
         CustomSubTitle(
           subtitle: '${category.translationKey}.subtitle',
-          isTranslationKey: true,
+          isTranslationKey: false,
         ),
         const SizedBox(
           height: 8,

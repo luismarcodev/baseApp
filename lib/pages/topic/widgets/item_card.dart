@@ -16,6 +16,7 @@ class ItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print(item.translationKey.runtimeType);
     return GestureDetector(
       onTap: () {
         Navigator.push(
@@ -52,7 +53,7 @@ class ItemCard extends StatelessWidget {
               child: Text(
                 '${item.translationKey}.title',
                 style: const TextStyle(
-                    fontSize: 24,
+                    fontSize: 14,
                     color: Colors.black,
                     fontWeight: FontWeight.bold),
               ).tr(),

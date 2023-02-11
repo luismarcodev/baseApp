@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  await ProjectSettings().getMainData();
 
   runApp(
     EasyLocalization(
