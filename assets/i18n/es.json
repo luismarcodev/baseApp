@@ -1,12 +1,12 @@
 {
   "common": {
-    "title": "Title",
-    "subtitle": "This is a subtitle of the aplicaton"
+    "title": "FilosofiApp",
+    "subtitle": "Toda la información sobra la filosofía"
   },
   "topics": {
     "topic1": {
-      "title": "Topic 1",
-      "subtitle": "Subtitle of topic 1",
+      "title": "Filosofos",
+      "subtitle": "Principales filósofos de la historia",
       "urlImage": "https://objetivoweb.es/base_app/no_image.jpg",
       "categories": {
         "category1": {
@@ -14,22 +14,34 @@
           "subtitle": "Subtitle of category 1",
           "items": {
             "item1": {
-              "title": "Item 1",
-              "subtitle": "Subtitle of item 1",
-              "description": "Description 1",
-              "urlImage": "https://objetivoweb.es/base_app/no_image.jpg"
+              "title": "Epicteto",
+              "subtitle": "55 - 135 d.C.",
+              "description": "Epicteto fue un filósofo estoico griego que enseñó que los seres humanos podían controlar su propia felicidad enfocándose en sus propios pensamientos y reacciones al mundo que los rodea.",
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Epict%C3%A8te.jpg"
             },
             "item2": {
-              "title": "Item 2",
-              "subtitle": "Subtitle of item 2",
-              "description": "Description 2",
-              "urlImage": "https://objetivoweb.es/base_app/no_image.jpg"
+              "title": "Marco Aurelio",
+              "subtitle": "121 - 180 d.C.",
+              "description": "Marco Aurelio fue un emperador romano y filósofo estoico que escribió la famosa obra 'Meditaciones', en la que reflexionó sobre sus propias creencias filosóficas y experiencias como líder.",
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Marcus_Aurelius_Louvre_Ma1246.jpg/1200px-Marcus_Aurelius_Louvre_Ma1246.jpg"
             },
             "item3": {
-              "title": "Item 3",
-              "subtitle": "Subtitle of item 3",
-              "description": "Description 3",
-              "urlImage": "https://objetivoweb.es/base_app/no_image.jpg"
+              "title": "Séneca el Joven",
+              "subtitle": "4 a.C. - 65 d.C.",
+              "description": "Séneca fue un filósofo estoico romano, estadista y dramaturgo que creía en la importancia de la ética personal y la paz interior, y escribió extensamente sobre temas de felicidad y virtud.",
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Seneca_the_Younger.jpg/1200px-Seneca_the_Younger.jpg"
+            },
+            "item4": {
+              "title": "Crisipo",
+              "subtitle": "280 - 207 a.C.",
+              "description": "Crisipo fue un filósofo estoico griego que hizo contribuciones significativas a la filosofía estoica, incluyendo la idea de que la razón era la fuerza rectora en el universo, y que los seres humanos podían usar la razón para alcanzar una vida virtuosa.",
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/62/Chrysippus_2.jpg"
+            },
+            "item5": {
+              "title": "Zenón de Citio",
+              "subtitle": "334 - 262 a.C.",
+              "description": "Zenón de Citio fue el fundador de la filosofía estoica, y enseñó que la virtud y la sabiduría eran las claves para una vida feliz, y que las circunstancias externas eran en gran medida irrelevantes.",
+              "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Zeno_of_Citium.jpg"
             }
           }
         }
