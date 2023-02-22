@@ -1,0 +1,9 @@
+languageIds:
+  - dart
+
+
+usageMatchRegex:
+  - ""
+
+refactorTemplates:
+  - Text("$1")

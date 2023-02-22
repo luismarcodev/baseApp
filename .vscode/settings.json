@@ -1,0 +1,14 @@
+{
+    "i18n-ally.localesPaths": [
+        "assets/i18n"
+    ],
+    "i18n-ally.enabledFrameworks": [
+        "flutter"
+    ],
+    "i18n-ally.keystyle": "nested",
+    "editor.formatOnSave": true,
+    "[dart]": {
+        "editor.defaultFormatter": "Dart-Code.dart-code",
+        "editor.formatOnSave": true,
+    }
+}
