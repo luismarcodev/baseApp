@@ -29,13 +29,23 @@ class ItemPage extends StatelessWidget {
             subtitle: '${item.translationKey}.title',
             imageUrlLink: item.urlImage,
           ),
-          CustomSubTitle(
-            subtitle: '${item.translationKey}.subtitle',
-            isTranslationKey: true,
-          ),
-          CustomDescription(
-            description: '${item.translationKey}.description',
-          ),
+          Padding(
+            padding: const EdgeInsets.all(8),
+            child: Column(
+              children: [
+                CustomSubTitle(
+                  subtitle: '${item.translationKey}.subtitle',
+                  isTranslationKey: true,
+                ),
+                const SizedBox(
+                  height: 8,
+                ),
+                CustomDescription(
+                  description: '${item.translationKey}.description',
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );

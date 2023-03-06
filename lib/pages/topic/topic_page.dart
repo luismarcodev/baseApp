@@ -23,17 +23,16 @@ class TopicPage extends StatelessWidget {
           CustomHeaderWithImage(
               subtitle: '${topic.translationKey}.title',
               imageUrlLink: topic.urlImage),
-          const SizedBox(
-            height: 8,
-          ),
-          CustomSubTitle(
-            subtitle: '${topic.translationKey}.subtitle',
-            isTranslationKey: true,
-          ),
           Padding(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.all(8.0),
             child: Column(
-              children: getCategoryWidgets(topic.categories),
+              children: [
+                CustomSubTitle(
+                  subtitle: '${topic.translationKey}.subtitle',
+                  isTranslationKey: true,
+                ),
+                ...getCategoryWidgets(topic.categories)
+              ],
             ),
           ),
         ],
