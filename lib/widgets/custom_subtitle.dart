@@ -17,11 +17,11 @@ class CustomSubTitle extends StatelessWidget {
     return isTranslationKey
         ? Text(
             subtitle,
-            style: BaseStyles.subtitleStyle,
+            style: BaseStyles.subtitleLightStyle,
           ).tr()
         : Text(
             subtitle,
-            style: BaseStyles.subtitleStyle,
+            style: BaseStyles.subtitleLightStyle,
           );
   }
 }

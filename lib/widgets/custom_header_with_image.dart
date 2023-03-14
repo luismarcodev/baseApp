@@ -37,13 +37,15 @@ class CustomHeaderWithImage extends StatelessWidget {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(4),
               child: Container(
-                color: Color.fromRGBO(255, 255, 255, 0.5),
-                padding: EdgeInsets.all(18),
-                child: Text(subtitle,
-                    style: TextStyle(
-                      fontSize: 35,
-                      color: Colors.black54,
-                    )).tr(),
+                color: Colors.white,
+                padding: const EdgeInsets.all(18),
+                child: Text(
+                  subtitle,
+                  style: const TextStyle(
+                    fontSize: 35,
+                    color: Colors.black54,
+                  ),
+                ).tr(),
               ),
             ),
           ),

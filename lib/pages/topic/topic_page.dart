@@ -27,9 +27,15 @@ class TopicPage extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
+                const SizedBox(
+                  height: 16,
+                ),
                 CustomSubTitle(
                   subtitle: '${topic.translationKey}.subtitle',
                   isTranslationKey: true,
+                ),
+                const SizedBox(
+                  height: 16,
                 ),
                 ...getCategoryWidgets(topic.categories)
               ],
@@ -45,7 +51,9 @@ class TopicPage extends StatelessWidget {
 
     for (Category category in categories) {
       categoryList.add(CategorySection(category: category));
-      categoryList.add(const Divider());
+      categoryList.add(const SizedBox(
+        height: 16,
+      ));
     }
 
     return categoryList;

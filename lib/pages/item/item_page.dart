@@ -23,30 +23,38 @@ class ItemPage extends StatelessWidget {
         elevation: 0,
         shadowColor: Colors.transparent,
       ),
-      body: Column(
-        children: [
-          CustomHeaderWithImage(
-            subtitle: '${item.translationKey}.title',
-            imageUrlLink: item.urlImage,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8),
-            child: Column(
-              children: [
-                CustomSubTitle(
-                  subtitle: '${item.translationKey}.subtitle',
-                  isTranslationKey: true,
-                ),
-                const SizedBox(
-                  height: 8,
-                ),
-                CustomDescription(
-                  description: '${item.translationKey}.description',
-                ),
-              ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            CustomHeaderWithImage(
+              subtitle: '${item.translationKey}.title',
+              imageUrlLink: item.urlImage,
             ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 8,
+                horizontal: 24,
+              ),
+              child: Column(
+                children: [
+                  CustomSubTitle(
+                    subtitle: '${item.translationKey}.subtitle',
+                    isTranslationKey: true,
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  CustomDescription(
+                    description: '${item.translationKey}.description',
+                  ),
+                  const SizedBox(
+                    height: 64,
+                  ),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

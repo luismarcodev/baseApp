@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BaseColors {
-  static const main = Color.fromARGB(255, 141, 52, 19);
+  static const main = Colors.red;
   static const secondary = Colors.white;
   static const lightText = Colors.grey;
   static const midText = Color.fromARGB(255, 87, 87, 87);
@@ -13,7 +13,12 @@ class BaseStyles {
     fontSize: 26,
     color: BaseColors.main,
   );
-  static const subtitleStyle = TextStyle(
+  static const subtitleBoldStyle = TextStyle(
+    fontSize: 20,
+    color: BaseColors.hardText,
+    fontWeight: FontWeight.w700,
+  );
+  static const subtitleLightStyle = TextStyle(
     fontSize: 20,
     color: BaseColors.hardText,
   );
@@ -24,7 +29,6 @@ class BaseStyles {
 }
 
 final baseTheme = ThemeData(
-  fontFamily: 'monserratBold',
   appBarTheme: const AppBarTheme(
     color: BaseColors.main,
   ),
