@@ -19,7 +19,7 @@ class CategorySection extends StatelessWidget {
         Align(
           alignment: Alignment.centerLeft,
           child: CustomTitle(
-            title: category.title,
+            title: '${category.translationKey}.title',
             isTranslationKey: true,
           ),
         ),
