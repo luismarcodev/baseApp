@@ -23,14 +23,17 @@ class CategorySection extends StatelessWidget {
             isTranslationKey: true,
           ),
         ),
+        const SizedBox(
+          height: 8,
+        ),
         CustomSubTitle(
           subtitle: '${category.translationKey}.subtitle',
           isTranslationKey: true,
         ),
         const SizedBox(
-          height: 8,
+          height: 16,
         ),
-         ItemsHorizontalListView(items: category.items)
+        ItemsHorizontalListView(items: category.items)
       ],
     );
   }

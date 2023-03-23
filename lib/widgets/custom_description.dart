@@ -1,3 +1,4 @@
+import 'package:base_app/theme/theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +12,10 @@ class CustomDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(description).tr();
+    return Text(
+      description,
+      style: BaseStyles.descriptionText,
+      textAlign: TextAlign.justify,
+    ).tr();
   }
 }

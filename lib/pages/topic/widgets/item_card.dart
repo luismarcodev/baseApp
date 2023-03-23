@@ -19,49 +19,50 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => ItemPage(
-                item: item,
-              ),
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ItemPage(
+              item: item,
             ),
-          );
-        },
+          ),
+        );
+      },
+      child: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image:
+                NetworkImage(item.urlImage + Random().nextInt(100).toString()),
+            fit: BoxFit.cover,
+          ),
+        ),
+        width: 200,
+        height: 150,
         child: Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(
-                    item.urlImage + Random().nextInt(100).toString()),
-                fit: BoxFit.cover,
-              ),
-            ),
-            width: 150,
-            height: 150,
+          decoration: const BoxDecoration(shape: BoxShape.circle),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 16,
+            vertical: 8,
+          ),
+          alignment: AlignmentDirectional.center,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(4),
             child: Container(
-                decoration: const BoxDecoration(shape: BoxShape.circle),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 16,
-                  vertical: 8,
+              color: const Color.fromRGBO(255, 255, 255, 0.5),
+              padding: const EdgeInsets.all(18),
+              child: Text(
+                '${item.translationKey}.title',
+                style: const TextStyle(
+                  fontSize: 24,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
                 ),
-                alignment: AlignmentDirectional.center,
-                child: ClipRRect(
-                    borderRadius: BorderRadius.circular(4),
-                    child: Container(
-                      color: const Color.fromRGBO(255, 255, 255, 0.5),
-                      padding: const EdgeInsets.all(18),
-                      child: Text('${item.translationKey}.title',
-                              style: const TextStyle(
-                                  fontSize: 24,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold))
-                          .tr(),
-
-                      //   child: Center(
-                      //     child: Text('${item.translationKey}.title').tr(),
-                      //   ),
-                      // ),
-                    )))));
+              ).tr(),
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
